@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Varela+Round">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <title>To-Do App</title>
+  </head>
+
+  <body ng-app="todoListApp">
+    <h1>Todo List</h1>
+    <div class="list">
+    <div class="add">
+      <a href="#" ng-click="addTodo()">
+        + Add a New Task</a>
+      </div>
+      <todos></todos>
+   </div>
+  </body>
+</html>
+
+<script type="text/javascript" src="vendor/angular.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/controllers/main.js"></script>
+<script type="text/javascript" src="scripts/services/data.js"></script>
+<script type="text/javascript" src="scripts/directives/todos.js"></script>
