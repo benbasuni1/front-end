@@ -3,30 +3,21 @@
 angular.module('todoListApp')
 .controller('mainCtrl', function($scope, dataService) {
 
-  $scope.addTodo = function() {
-    let todo = {name: "This is a new todo"};
-    $scope.todos.unshift(todo);
-  }
+  $scope.addTodo = () => $scope.todos.unshift({name: "New Todo"});
 
-  $scope.deleteTodo = function(todo, $index) {
+  $scope.deleteTodo = (todo, $index) => {
     dataService.deleteTodo(todo);
     $scope.todos.splice($index, 1);
   };
 
-  $scope.saveTodos = function(todo, $index) {
-    let filteredTodos = $scope.todos.filter(function(todo) {
-      if (todo.edited) {
-        return todo;
-      }
+  $scope.saveTodos = (todo, $index) =>{
+    let filteredTodos = $scope.todos.filter(todo => { 
+      if (todo.edited) return todo
     });
-
     dataService.saveTodos(filteredTodos);
   };
 
-  dataService.getTodos(function(response) {
-    $scope.todos = response.data;
-  });
-
+  dataService.getTodos(response => $scope.todos = response.data);
 });
 
 
