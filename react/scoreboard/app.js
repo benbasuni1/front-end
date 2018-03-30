@@ -1,3 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import createReactClass from 'create-react-class';
+import propTypes from 'prop-types';
+
 let PLAYERS = [
   {
     name: "Ben",
@@ -19,7 +24,7 @@ let PLAYERS = [
 let nextId = 4;
 
 /* STOPWATCH ----------------- */
-let Stopwatch = React.createClass({
+let Stopwatch = createReactClass({
   getInitialState: function() {
     return {
       running      : false,
@@ -81,9 +86,9 @@ let Stopwatch = React.createClass({
 });
 
 /* ADD PLAYER FORM -----------*/
-let AddPlayerForm = React.createClass({
+let AddPlayerForm = createReactClass({
   propTypes: {
-    onAdd: React.PropTypes.func.isRequired,
+    onAdd: propTypes.func.isRequired,
   },
 
   getInitialState: function() {
@@ -139,7 +144,7 @@ function Stats(props) {
 }
 
 Stats.propType = {
-  players: React.PropTypes.array.isRequired
+  players: propTypes.array.isRequired
 };
 
 /* HEADER -----------------*/
@@ -154,8 +159,8 @@ function Header(props) {
 }
 
 Header.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  players: React.PropTypes.array.isRequired,
+  title: propTypes.string.isRequired,
+  players: propTypes.array.isRequired,
 };
 
 /* COUNTER -----------------*/
@@ -170,8 +175,8 @@ function Counter(props) {
 }
 
 Counter.propTypes = {
-  score    : React.PropTypes.number.isRequired,
-  onChange : React.PropTypes.func.isRequired
+  score    : propTypes.number.isRequired,
+  onChange : propTypes.func.isRequired
 }
 
 /* PLAYER  -----------------*/
@@ -190,20 +195,20 @@ function Player(props) {
 }
 
 Player.propTypes = {
-  name          : React.PropTypes.string.isRequired,
-  score         : React.PropTypes.number.isRequired,
-  onScoreChange : React.PropTypes.func.isRequired,
-  onRemove      : React.PropTypes.func.isRequired,
+  name          : propTypes.string.isRequired,
+  score         : propTypes.number.isRequired,
+  onScoreChange : propTypes.func.isRequired,
+  onRemove      : propTypes.func.isRequired,
 };
 
 /* APPLICATION  -----------------*/
-let Application = React.createClass({
+let Application = createReactClass({
 
   propTypes: {
-    title   : React.PropTypes.string,
-    initialPlayers : React.PropTypes.arrayOf(React.PropTypes.shape({
-      name  : React.PropTypes.string.isRequired,
-      score : React.PropTypes.number.isRequired
+    title   : propTypes.string,
+    initialPlayers : propTypes.arrayOf(propTypes.shape({
+      name  : propTypes.string.isRequired,
+      score : propTypes.number.isRequired
     })).isRequired
   },
 
