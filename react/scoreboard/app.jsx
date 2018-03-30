@@ -1,4 +1,4 @@
-var PLAYERS = [
+let PLAYERS = [
   {
     name: "Ben",
     score : 31,
@@ -16,9 +16,10 @@ var PLAYERS = [
   }
 ];
 
-var nextId = 4;
+let nextId = 4;
 
-var Stopwatch = React.createClass({
+/* STOPWATCH ----------------- */
+let Stopwatch = React.createClass({
   getInitialState: function() {
     return {
       running      : false,
@@ -37,7 +38,7 @@ var Stopwatch = React.createClass({
 
   onTick: function() {
     if (this.state.running) {
-      var now = Date.now();
+      let now = Date.now();
       this.setState({
         previousTime: now,
         elapsedTime: this.state.elapsedTime + (now - this.state.previousTime)
@@ -65,7 +66,7 @@ var Stopwatch = React.createClass({
   },
 
   render: function() {
-    var seconds = Math.floor(this.state.elapsedTime / 1000);
+    let seconds = Math.floor(this.state.elapsedTime / 1000);
     return (
       <div className="stopwatch">
         <h2>Stopwatch</h2>
@@ -79,8 +80,9 @@ var Stopwatch = React.createClass({
   }
 });
 
-var AddPlayerForm = React.createClass({
-  propType: {
+/* ADD PLAYER FORM -----------*/
+let AddPlayerForm = React.createClass({
+  propTypes: {
     onAdd: React.PropTypes.func.isRequired,
   },
 
@@ -113,9 +115,10 @@ var AddPlayerForm = React.createClass({
   }
 });
 
+/* STATS -----------------*/
 function Stats(props) {
-  var totalPlayers = props.players.length;
-  var totalPoints = props.players.reduce(function(total, player) {
+  let totalPlayers = props.players.length;
+  let totalPoints = props.players.reduce(function(total, player) {
     return total + player.score;
   }, 0);
 
@@ -139,6 +142,7 @@ Stats.propType = {
   players: React.PropTypes.array.isRequired
 };
 
+/* HEADER -----------------*/
 function Header(props) {
   return (
     <div className="header">
@@ -154,6 +158,7 @@ Header.propTypes = {
   players: React.PropTypes.array.isRequired,
 };
 
+/* COUNTER -----------------*/
 function Counter(props) {
     return (
       <div className="counter">
@@ -169,10 +174,7 @@ Counter.propTypes = {
   onChange : React.PropTypes.func.isRequired
 }
 
-Player.propType = {
-  score: React.PropTypes.number.isRequired,
-};
-
+/* PLAYER  -----------------*/
 function Player(props) {
   return (
     <div className="player">
@@ -194,7 +196,8 @@ Player.propTypes = {
   onRemove      : React.PropTypes.func.isRequired,
 };
 
-var Application = React.createClass({
+/* APPLICATION  -----------------*/
+let Application = React.createClass({
 
   propTypes: {
     title   : React.PropTypes.string,
@@ -222,7 +225,6 @@ var Application = React.createClass({
   },
 
   onPlayerAdd: function(name) {
-    console.log(`Player Added:`, name);
     this.state.players.push({
       name: name,
       score: 0,
@@ -258,9 +260,5 @@ var Application = React.createClass({
     );
   }
 });
-
-Application.defaultProps = {
-  title: "Scoreboard"
-}
 
 ReactDOM.render(<Application initialPlayers={PLAYERS}/>, document.getElementById('container'));

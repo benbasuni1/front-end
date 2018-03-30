@@ -11,7 +11,7 @@ angular.module('todoListApp')
   };
 
   $scope.saveTodos = (todo, $index) =>{
-    let filteredTodos = $scope.todos.filter(todo => { 
+    let filteredTodos = $scope.todos.filter(todo => {
       if (todo.edited) return todo
     });
     dataService.saveTodos(filteredTodos);
