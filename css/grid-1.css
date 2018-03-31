@@ -1,0 +1,41 @@
+
+.grid {
+  max-width             : 1000px;
+  display               : grid;
+  grid-template-columns : repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows    : repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap              : 15px 20px;
+  grid-auto-columns     : 1fr;
+  grid-auto-flow        : row; /* column */
+}
+
+/*
+  auto-fit  : FILL **
+  auto-fill : EMPTY
+
+  grid-template-columns : repeat(3, minmax(200px, 1fr));
+  grid-template-rows    : 100px 100px;
+
+  grid-template-columns : repeat(3, 1fr);
+  grid-template-rows    : 100px 100px;
+
+  grid-template-columns : 1fr 1fr 1fr;
+  grid-template-rows    : 100px 100px;
+
+  grid-row-gap    : 15px
+  grid-column-gap : 20px
+
+  Grid Container
+    1. Sets up the container
+
+  Grid Items
+    1. Can be any number of items
+
+                            1    2    3    4
+                            |    |    |    |
+                          1 ----------------
+                            |    |    |    |
+                          2 ----------------
+                            |    |    |    |
+                          3 ----------------
+  */
