@@ -11,6 +11,6 @@ react/guest-list/node_modules
 react/guest-list/package-lock.json
 react/guest-list/bundle.js
 
-react/jedi/node_modules
-react/jedi/package-lock.json
-react/jedi/bundle.js
+react/jedi-react/node_modules
+react/jedi-react/package-lock.json
+react/jedi-react/bundle.js
