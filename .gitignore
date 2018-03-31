@@ -4,3 +4,6 @@ react/scoreboard/dist/
 react/scoreboard/node_modules/
 react/scoreboard/package-lock.json
 .DS_Store
+react/guest-list/node_modules
+react/guest-list/package-lock.json
+react/guest-list/bundle.js
