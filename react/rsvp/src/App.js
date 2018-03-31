@@ -32,7 +32,6 @@ class App extends Component {
         return guest;
       })
     });
-    console.log(`id: `, id);
   }
 
   toggleConfirmation = id =>
