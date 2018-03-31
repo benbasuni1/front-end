@@ -1,9 +1,16 @@
 react/react-bootstrap-test/node_modules
+
 react/scoreboard/.babelrc
 react/scoreboard/dist/
 react/scoreboard/node_modules/
 react/scoreboard/package-lock.json
+
 .DS_Store
+
 react/guest-list/node_modules
 react/guest-list/package-lock.json
 react/guest-list/bundle.js
+
+react/jedi/node_modules
+react/jedi/package-lock.json
+react/jedi/bundle.js
