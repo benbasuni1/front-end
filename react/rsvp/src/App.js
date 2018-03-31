@@ -7,20 +7,20 @@ import MainContent from './MainContent';
 class App extends Component {
 
   state = {
-    isFiltered: false,
-    pendingGuest: "",
-    guests: []
+    isFiltered   : false,
+    pendingGuest : "",
+    guests       : []
   };
 
   lastGuestId = 0;
 
   newGuestId = () => {
-    const id = this.lastGuestId;
-    this.lastGuestId += 1;
+    let id = this.lastGuestId;
+    this.lastGuestId++;
     return id;
   };
 
-  toggleGuestProperty = (property, id) =>
+  toggleGuestProperty = (property, id) => {
     this.setState({
       guests: this.state.guests.map(guest => {
         if (id === guest.id) {
@@ -32,6 +32,8 @@ class App extends Component {
         return guest;
       })
     });
+    console.log(`id: `, id);
+  }
 
   toggleConfirmation = id =>
     this.toggleGuestProperty("isConfirmed", id);
@@ -68,13 +70,13 @@ class App extends Component {
     const id = this.newGuestId();
     this.setState({
       guests: [
+        ...this.state.guests,
         {
           name: this.state.pendingGuest,
           isConfirmed: false,
           isEditing: false,
           id
-        },
-        ...this.state.guests
+        }
       ],
       pendingGuest: ''
     });
