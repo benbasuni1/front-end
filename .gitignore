@@ -1,15 +1,15 @@
-react/react-bootstrap-test/node_modules
+.DS_Store
+
+react/01-react-bootstrap/node_modules
 
 react/scoreboard/.babelrc
 react/scoreboard/dist/
 react/scoreboard/node_modules/
 react/scoreboard/package-lock.json
 
-.DS_Store
-
-react/guest-list/node_modules
-react/guest-list/package-lock.json
-react/guest-list/bundle.js
+react/02-guestList-animation/node_modules
+react/02-guestList-animation/package-lock.json
+react/02-guestList-animation/bundle.js
 
 react/jedi-react/node_modules
 react/jedi-react/package-lock.json
@@ -19,3 +19,6 @@ react/gif-search/node_modules
 react/gif-search/package-lock.json
 react/gif-search/build
 react/gif-search/.env
+
+react/03-the-way/node_modules
+react/03-the-way/package-lock.json

@@ -33,15 +33,15 @@ export default class App extends Component {
     });
   }
 
-  render() { 
+  render() {
     return (
       <div>
         <div className="main-header">
           <div className="inner">
             <h1 className="main-title">GifSearch</h1>
-            <SearchForm onSearch={this.performSearch}/>      
-          </div>   
-        </div>    
+            <SearchForm onSearch={this.performSearch}/>
+          </div>
+        </div>
         <div className="main-content">
           {
             (this.state.loading) 
