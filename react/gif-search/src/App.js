@@ -1,3 +1,4 @@
+require('dotenv').config();
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
@@ -6,7 +7,7 @@ import GifList from './Components/GifList';
 
 
 export default class App extends Component {
-  
+
   constructor() {
     super();
     this.state = {
@@ -20,7 +21,7 @@ export default class App extends Component {
   }
 
   performSearch = (query = 'cats') => {
-    axios.get(`http://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=03Pa7adLCC33tfiicq6Tqfybc7OjFdOX`)
+    axios.get(`http://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=${process.env.REACT_APP_API_KEY}`)
     .then(response => {
       this.setState({
         gifs: response.data.data,

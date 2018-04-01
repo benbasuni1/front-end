@@ -18,3 +18,4 @@ react/jedi-react/build
 react/gif-search/node_modules
 react/gif-search/package-lock.json
 react/gif-search/build
+react/gif-search/.env
