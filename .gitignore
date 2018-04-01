@@ -2,23 +2,27 @@
 
 react/01-react-bootstrap/node_modules
 
-react/scoreboard/.babelrc
-react/scoreboard/dist/
-react/scoreboard/node_modules/
-react/scoreboard/package-lock.json
-
 react/02-guestList-animation/node_modules
 react/02-guestList-animation/package-lock.json
 react/02-guestList-animation/bundle.js
 
-react/jedi-react/node_modules
-react/jedi-react/package-lock.json
-react/jedi-react/build
-
-react/gif-search/node_modules
-react/gif-search/package-lock.json
-react/gif-search/build
-react/gif-search/.env
-
 react/03-the-way/node_modules
 react/03-the-way/package-lock.json
+
+react/04-gif-search/node_modules
+react/04-gif-search/package-lock.json
+react/04-gif-search/build
+react/04-gif-search/.env
+
+react/05-jedi-react/node_modules
+react/05-jedi-react/package-lock.json
+react/05-jedi-react/build
+
+react/07-scoreboard/.babelrc
+react/07-scoreboard/dist/
+react/07-scoreboard/node_modules/
+react/07-scoreboard/package-lock.json
+
+react/08-classes-react-router/node_modules
+react/08-classes-react-router/package-lock.json
+
