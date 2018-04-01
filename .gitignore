@@ -14,3 +14,7 @@ react/guest-list/bundle.js
 react/jedi-react/node_modules
 react/jedi-react/package-lock.json
 react/jedi-react/build
+
+react/gif-search/node_modules
+react/gif-search/package-lock.json
+react/gif-search/build
