@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Components 
-import Scoreboard from './components/Scoreboard';
+import Scoreboard from './components/Scoreboard.js';
 
 // CSS
 import './style.css';

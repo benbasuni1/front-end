@@ -9,7 +9,7 @@ class Home extends Component {
     let path = `teachers/${teacherTopic}/${teacherName}`;
     this.props.history.push(path);
   }
-  
+
   render() {
     return (
       <div className="main-content home">

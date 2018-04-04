@@ -3,14 +3,16 @@
 }
 body {
   font-family: 'Lato', sans-serif;
-  background: #e5e5e5;
+  background: lightgrey;
 }
 ul {
   margin: 0;
   padding: 0;
 }
 h1 {
-  color: #303030;
+  color: #170f5f;
+  text-align: center;
+  font-size: 48px;
   margin-top: 0;
 }
 input {
@@ -37,7 +39,7 @@ button {
   width: 90%;
   margin: 2em auto 0;
   padding: 1.5em;
-  background: #fff;
+  background: lightslategrey;
   border-radius: .5em;
   box-shadow: 0 2px 0 rgba(0,0,0,.1);
 }
@@ -50,6 +52,8 @@ li {
   border-bottom: dotted 1px rgba(255,255,255, .4);
   padding: 1em .85em;
   background: #74afe1;
+  margin: 2px;
+  border-radius: 5px;
 }
 li:last-child {
   border: none;

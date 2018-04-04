@@ -18,11 +18,14 @@ react/05-jedi-react/node_modules
 react/05-jedi-react/package-lock.json
 react/05-jedi-react/build
 
-react/07-scoreboard/.babelrc
-react/07-scoreboard/dist/
-react/07-scoreboard/node_modules/
-react/07-scoreboard/package-lock.json
+react/07-scoreboard-webpack/.babelrc
+react/07-scoreboard-webpack/dist/
+react/07-scoreboard-webpack/node_modules/
+react/07-scoreboard-webpack/package-lock.json
 
 react/08-classes-react-router/node_modules
 react/08-classes-react-router/package-lock.json
+
+vue/crypto/node_modules
+
 

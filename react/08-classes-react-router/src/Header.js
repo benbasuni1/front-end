@@ -9,7 +9,7 @@ const Header = () => (
       <li><NavLink to="/about" activeClassName="about-active">About</NavLink></li>
       <li><NavLink to="/teachers">Teachers</NavLink></li>
       <li><NavLink to="/courses">Courses</NavLink></li>
-    </ul>    
+    </ul>
   </header>
 );
 

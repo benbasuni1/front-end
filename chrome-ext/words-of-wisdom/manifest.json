@@ -1,0 +1,16 @@
+{
+  "name"         : "Words of Wisdom",
+  "version"      : "1.1",
+  "description"  : "Compilation of words of wisdom",
+  "permissions"  : ["activeTab", "declarativeContent", "storage", "tabs"],
+  "chrome_url_overrides": {
+    "newtab": "wisdom.html"
+  },
+  "icons": {
+    "16"  : "images/palm_16.png",
+    "32"  : "images/palm_32.png",
+    "48"  : "images/palm_48.png",
+    "128" : "images/palm_128.png"
+  },
+  "manifest_version": 2
+}
